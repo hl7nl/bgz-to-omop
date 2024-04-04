@@ -3,35 +3,42 @@
     "id" : "hl7.fhir.nl.bgz-to-omop",
     "type" : "ImplementationGuide",
     "url" : "http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop",
-    "version" : "0.24.0",
+    "version" : "0.1.0",
     "name" : "bgz-to-omop-ig"
   },
   {
     "id" : "CareSite",
     "type" : "StructureDefinition",
     "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite",
-    "version" : "0.24.0",
+    "version" : "0.1.0",
     "name" : "CareSite"
   },
   {
     "id" : "Location",
     "type" : "StructureDefinition",
     "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Location",
-    "version" : "0.24.0",
+    "version" : "0.1.0",
     "name" : "Location"
   },
   {
     "id" : "Person",
     "type" : "StructureDefinition",
     "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
-    "version" : "0.24.0",
+    "version" : "0.1.0",
     "name" : "Person"
   },
   {
     "id" : "Provider",
     "type" : "StructureDefinition",
     "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Provider",
-    "version" : "0.24.0",
+    "version" : "0.1.0",
     "name" : "Provider"
+  },
+  {
+    "id" : "person-transform",
+    "type" : "StructureMap",
+    "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform",
+    "version" : "0.1.0",
+    "name" : "Transform from a FHIR Patient to an OMOP Person"
   }
 ]

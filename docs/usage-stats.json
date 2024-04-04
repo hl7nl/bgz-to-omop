@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.nl.bgz-to-omop",
-  "version": "0.24.0",
+  "version": "0.1.0",
   "fhirVersion": "3.0.2",
   "jurisdiction": "NL",
   "extensions": [],

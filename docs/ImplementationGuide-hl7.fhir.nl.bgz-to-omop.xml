@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop"/>
-  <version value="0.24.0"/>
+  <version value="0.1.0"/>
   <name value="bgz-to-omop-ig"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2024-04-04T11:41:05+00:00"/>
+  <date value="2024-04-04T12:18:58+00:00"/>
   <publisher value="OHDSINL HL7NL"/>
   <contact>
     <name value="OHDSINL"/>

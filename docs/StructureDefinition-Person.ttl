@@ -17,11 +17,11 @@
      fhir:value [ fhir:v "true"^^xsd:boolean ]
   ] ) ; # 
   fhir:url [ fhir:v "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.24.0"] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "Person"] ; # 
   fhir:title [ fhir:v "Person OMOP Table"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-04-04T11:41:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-04T12:18:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "OHDSINL HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "OHDSINL" ] ;

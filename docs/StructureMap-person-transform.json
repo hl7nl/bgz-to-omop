@@ -1,0 +1,69 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "person-transform",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform<span style=\"color: navy\">&quot; = &quot;</span>Transform from a FHIR Patient to an OMOP Person<span style=\"color: navy\">&quot;\r\n\r\n</span><b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-patient\" title=\"nl-core-patient\">http://fhir.nl/fhir/StructureDefinition/nl-core-patient</a><span style=\"color: navy\">&quot; </span><b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-Person.html\" title=\"Person OMOP Table\">http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person</a><span style=\"color: navy\">&quot; </span><b>as </b><b>target</b>\r\n\r\n<b>group </b>main<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">source</span><span style=\"color: navy\"> : </span>http://fhir.nl/fhir/StructureDefinition/nl-core-patient, <b>target</b> <span style=\"color: maroon\">target</span><span style=\"color: navy\"> : </span>http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  source.identifier[BSN]<b> as </b><span style=\"color: maroon\">BSN</span><span style=\"color: navy\"><b> -&gt; </b></span>target.person_source_value = <b>copy</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span> <i>&quot;BSN&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform",
+  "version" : "0.1.0",
+  "name" : "Transform from a FHIR Patient to an OMOP Person",
+  "status" : "draft",
+  "date" : "2024-04-04T12:18:58+00:00",
+  "publisher" : "OHDSINL HL7NL",
+  "contact" : [{
+    "name" : "OHDSINL",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ohdsi-europe.org/index.php/national-nodes/netherlands"
+    }]
+  },
+  {
+    "name" : "HL7NL",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://hl7.nl"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NL"
+    }]
+  }],
+  "structure" : [{
+    "url" : "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+    "mode" : "source"
+  },
+  {
+    "url" : "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
+    "mode" : "target"
+  }],
+  "group" : [{
+    "name" : "main",
+    "input" : [{
+      "name" : "source",
+      "type" : "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+      "mode" : "source"
+    },
+    {
+      "name" : "target",
+      "type" : "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "BSN",
+      "source" : [{
+        "context" : "source",
+        "element" : "identifier[BSN]",
+        "variable" : "BSN"
+      }],
+      "target" : [{
+        "context" : "target",
+        "contextType" : "variable",
+        "element" : "person_source_value",
+        "transform" : "copy"
+      }]
+    }]
+  }]
+}

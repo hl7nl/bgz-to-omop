@@ -5,15 +5,15 @@
   "description" : "A brief description of what MyIG is about (probably the same text as in your readme)",
   "status" : "draft",
   "package-id" : "hl7.fhir.nl.bgz-to-omop",
-  "ig-ver" : "0.24.0",
-  "date" : "Thu, 04 Apr, 2024 11:41:05 +0000",
-  "dateISO8601" : "2024-04-04T11:41:05+00:00",
-  "errs" : 8,
-  "warnings" : 8,
+  "ig-ver" : "0.1.0",
+  "date" : "Thu, 04 Apr, 2024 12:18:58 +0000",
+  "dateISO8601" : "2024-04-04T12:18:58+00:00",
+  "errs" : 11,
+  "warnings" : 9,
   "hints" : 0,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "3.0.2",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 456417224
+  "maxMemory" : 598595880
 }

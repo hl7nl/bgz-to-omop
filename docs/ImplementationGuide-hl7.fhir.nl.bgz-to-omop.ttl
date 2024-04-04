@@ -13,11 +13,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>bgz-to-omop-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
   ] ; # 
   fhir:url [ fhir:v "http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.24.0"] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "bgz-to-omop-ig"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-04-04T11:41:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-04T12:18:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "OHDSINL HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "OHDSINL" ] ;

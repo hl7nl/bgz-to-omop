@@ -1,0 +1,55 @@
+{
+    "resourceType": "StructureMap",
+    "id": "person-transform",
+    "url": "http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform",
+    "name": "Transform from a FHIR Patient to an OMOP Person",
+    "status": "draft",
+    "structure": [
+      {
+        "url": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+        "mode": "source"
+      },
+      {
+        "url": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
+        "mode": "target"
+      }
+    ],
+    "group": [
+      {
+        "name": "main",
+        "typeMode": "none",
+        "input": [
+          {
+            "name": "source",
+            "type": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+            "mode": "source"
+          },
+          {
+            "name": "target",
+            "type": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
+            "mode": "target"
+          }
+        ],
+        "rule": [
+          {
+            "name": "BSN",
+            "source": [
+              {
+                "context": "source",
+                "element": "identifier[BSN]",
+                "variable": "BSN"
+              }
+            ],
+            "target": [
+              {
+                "context": "target",
+                "contextType": "variable",
+                "element": "person_source_value",
+                "transform": "copy"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
