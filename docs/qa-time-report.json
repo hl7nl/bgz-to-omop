@@ -1,0 +1,276 @@
+{
+  "date" : "Thu, 04 Apr, 2024 11:41:05 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/input/bgz-to-omop-ig.json",
+      "size" : 2160,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 27,
+          "length" : 7
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 27,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 27,
+          "length" : 67
+        },
+        {
+          "activity" : "validate",
+          "start" : 28,
+          "length" : 37
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 28,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 29,
+          "length" : 49
+        },
+        {
+          "activity" : "generate2",
+          "start" : 31,
+          "length" : 54
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 38,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 43,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-CareSite.json",
+      "size" : 3598,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 27,
+          "length" : 8
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 27,
+          "length" : 1
+        },
+        {
+          "activity" : "loadInfo",
+          "start" : 27,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 27,
+          "length" : 14
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 27,
+          "length" : 14
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 27,
+          "length" : 79
+        },
+        {
+          "activity" : "validate",
+          "start" : 27,
+          "length" : 470
+        },
+        {
+          "activity" : "generate1",
+          "start" : 29,
+          "length" : 87
+        },
+        {
+          "activity" : "generate2",
+          "start" : 31,
+          "length" : 1467
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 38,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-Location.json",
+      "size" : 4726,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 27,
+          "length" : 7
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 27,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 27,
+          "length" : 12
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 27,
+          "length" : 22
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 27,
+          "length" : 90
+        },
+        {
+          "activity" : "validate",
+          "start" : 28,
+          "length" : 138
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 28,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 28,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 29,
+          "length" : 118
+        },
+        {
+          "activity" : "generate2",
+          "start" : 33,
+          "length" : 455
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 38,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-Person.json",
+      "size" : 8279,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 27,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 27,
+          "length" : 16
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 27,
+          "length" : 31
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 27,
+          "length" : 55
+        },
+        {
+          "activity" : "validate",
+          "start" : 28,
+          "length" : 189
+        },
+        {
+          "activity" : "generate1",
+          "start" : 29,
+          "length" : 148
+        },
+        {
+          "activity" : "generate2",
+          "start" : 33,
+          "length" : 320
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 38,
+          "length" : 4
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 43,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/StructureDefinition-Provider.json",
+      "size" : 6572,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 27,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 27,
+          "length" : 10
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 27,
+          "length" : 16
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 27,
+          "length" : 29
+        },
+        {
+          "activity" : "validate",
+          "start" : 28,
+          "length" : 110
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 28,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 29,
+          "length" : 142
+        },
+        {
+          "activity" : "generate2",
+          "start" : 34,
+          "length" : 217
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 38,
+          "length" : 3
+        }
+      ]
+    }
+  ]
+}

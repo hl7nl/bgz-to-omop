@@ -1,0 +1,58 @@
+<html><head><title>Terminology Server Log</title></head><body><h2>Terminology Server Log</h2><pre>
+
+</pre><hr/>
+<a name="l1"> </a><h3>1</h3>
+<pre>
+Request: 
+
+GET http://tx.fhir.org/r3/metadata?_summary=true HTTP/1.0
+accept:application/fhir+xml; fhirVersion=3.0
+accept-charset:UTF-8
+content-type:application/fhir+xml; fhirVersion=3.0;charset=UTF-8
+user-agent:fhir/publisher
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:2051
+content-type:application/fhir+xml; charset=UTF-8
+date:Thu, 04 Apr 2024 11:40:52 GMT
+pragma:no-cache
+server:nginx
+x-request-id:135-1415119
+
+<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir"><id value="FhirServer"/><meta><tag><system value="http://hl7.org/fhir/v3/ObservationValue"/><code value="SUBSETTED"/><display value="Subsetted"/></tag></meta><url value="http://tx.fhir.org/r3/metadata"/><version value="3.0.2-3.5.0"/><name value="FHIR Reference Server Conformance Statement"/><status value="active"/><date value="2024-04-04T11:40:52.677Z"/><contact><telecom><system value="other"/><value value="http://healthintersections.com.au/"/></telecom></contact><kind value="instance"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><software><name value="Reference Server"/><version value="3.5.0"/><releaseDate value="2024-03-29T08:29:59.571Z"/></software><implementation><description value="FHIR Server running at http://tx.fhir.org/r3"/><url value="http://tx.fhir.org/r3"/></implementation><fhirVersion value="3.0.2"/><acceptUnknown value="both"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><security><cors value="true"/></security><operation><name value="expand"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/></definition></operation><operation><name value="lookup"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"/></definition></operation><operation><name value="validate-code"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/></definition></operation><operation><name value="translate"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/></definition></operation><operation><name value="closure"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"/></definition></operation><operation><name value="versions"/><definition><reference value="http://tx.fhir.org/r3/OperationDefinition/fso-versions"/></definition></operation></rest></CapabilityStatement>
+
+--- 1 -----------------
+Request: 
+
+GET http://tx.fhir.org/r3/metadata?_summary=true HTTP/1.0
+accept:application/fhir+xml; fhirVersion=3.0
+accept-charset:UTF-8
+content-type:application/fhir+xml; fhirVersion=3.0;charset=UTF-8
+user-agent:fhir/publisher
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:2051
+content-type:application/fhir+xml; charset=UTF-8
+date:Thu, 04 Apr 2024 11:40:52 GMT
+pragma:no-cache
+server:nginx
+x-request-id:135-1415119
+
+<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir"><id value="FhirServer"/><meta><tag><system value="http://hl7.org/fhir/v3/ObservationValue"/><code value="SUBSETTED"/><display value="Subsetted"/></tag></meta><url value="http://tx.fhir.org/r3/metadata"/><version value="3.0.2-3.5.0"/><name value="FHIR Reference Server Conformance Statement"/><status value="active"/><date value="2024-04-04T11:40:52.677Z"/><contact><telecom><system value="other"/><value value="http://healthintersections.com.au/"/></telecom></contact><kind value="instance"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><software><name value="Reference Server"/><version value="3.5.0"/><releaseDate value="2024-03-29T08:29:59.571Z"/></software><implementation><description value="FHIR Server running at http://tx.fhir.org/r3"/><url value="http://tx.fhir.org/r3"/></implementation><fhirVersion value="3.0.2"/><acceptUnknown value="both"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><security><cors value="true"/></security><operation><name value="expand"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/></definition></operation><operation><name value="lookup"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"/></definition></operation><operation><name value="validate-code"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/></definition></operation><operation><name value="translate"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/></definition></operation><operation><name value="closure"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"/></definition></operation><operation><name value="versions"/><definition><reference value="http://tx.fhir.org/r3/OperationDefinition/fso-versions"/></definition></operation></rest></CapabilityStatement>
+</pre></head></html>

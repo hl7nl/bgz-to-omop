@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.nl.bgz-to-omop-ig",
   "url": "http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/bgz-to-omop-ig",
-  "version": "0.24.0",
+  "version": "0.1.0",
   "name": "bgz-to-omop-ig",
   "title": "BgZ to OMOP",
   "status": "draft",

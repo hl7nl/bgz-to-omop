@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hl7.fhir.nl.bgz-to-omop"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>bgz-to-omop-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.24.0"] ; # 
+  fhir:name [ fhir:v "bgz-to-omop-ig"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-04-04T11:41:05+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "OHDSINL HL7NL"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "OHDSINL" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ohdsi-europe.org/index.php/national-nodes/netherlands" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "HL7NL" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://hl7.nl" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A brief description of what MyIG is about (probably the same text as in your readme)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NL" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "3.0.2"] ; # 
+  fhir:dependency ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.terminology.r3" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "5.3.0" ]
+     ] ) ;
+     fhir:type [ fhir:v "reference" ] ;
+     fhir:uri [ fhir:v "https://simplifier.net/packages/hl7.terminology.r3/5.3.0"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "nictiz.fhir.nl.stu3.zib2017" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2.2.18" ]
+     ] ) ;
+     fhir:type [ fhir:v "reference" ] ;
+     fhir:uri [ fhir:v "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.18"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:page [
+     fhir:source [ fhir:v "index.html"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "Home Page" ] ;
+     fhir:kind [ fhir:v "resource" ] ;
+     fhir:page ( [
+       fhir:source [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Useful Downloads" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "copyrights.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Copyrights" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "searchform.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Search Form" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

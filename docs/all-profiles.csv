@@ -1,0 +1,107 @@
+"Profile","Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"CareSite","CareSite","CareSite","","","",0,*,"","","","null {[]} {[]}
+","CareSite OMOP Table","The CARE_SITE table contains a list of uniquely identified institutional (physical or organizational) units where healthcare delivery is practiced (offices, wards, hospitals, clinics, etc.).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"CareSite","CareSite.care-site-id","CareSite.care_site_id","","","",1,1,"","","","integer {[]} {[]}
+","Care Site Identifier","Care Site Identifier","","","","","","","","","",,,,,"",,,,"CareSite.care_site_id",1,1,"",""
+"CareSite","CareSite.care-site-name","CareSite.care_site_name","","","",0,1,"","","","string {[]} {[]}
+","Care Site Name","The name of the care_site as it appears in the source data","","","","","","","","","",,,,,"",,,,"CareSite.care_site_name",0,1,"",""
+"CareSite","CareSite.place-of-service-concept-id","CareSite.place_of_service_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Place of Service","This is a high-level way of characterizing a Care Site. Typically, however, Care Sites can provide care in multiple settings (inpatient, outpatient, etc.) and this granularity should be reflected in the visit.","","","","","","","","","",,,,,"",,,,"CareSite.place_of_service_concept_id",0,1,"",""
+"CareSite","CareSite.location-id","CareSite.location_id","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Location]]}
+","Location","The location_id from the LOCATION table representing the physical location of the care_site.","","","","","","","","","",,,,,"",,,,"CareSite.location_id",0,1,"",""
+"CareSite","CareSite.care-site-source-value","CareSite.care_site_source_value","","","",0,1,"","","","string {[]} {[]}
+","Care Site Identifier Source Value","The identifier of the care_site as it appears in the source data. This could be an identifier separate from the name of the care_site.","","","","","","","","","",,,,,"",,,,"CareSite.care_site_source_value",0,1,"",""
+"CareSite","CareSite.place-of-service-source-value","CareSite.place_of_service_source_value","","","",0,1,"","","","string {[]} {[]}
+","Place of Service Source Value","Place of Service Source Value","","","","","","","","","",,,,,"",,,,"CareSite.place_of_service_source_value",0,1,"",""
+"Location","Location","Location","","","",0,*,"","","","null {[]} {[]}
+","Location OMOP Table","The LOCATION table represents a generic way to capture physical location or address information of Persons and Care Sites.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Location","Location.location-id","Location.location_id","","","",1,1,"","","","integer {[]} {[]}
+","Location Identifier","The unique key given to a unique Location.","","","","","","","","","",,,,,"",,,,"Location.location_id",1,1,"",""
+"Location","Location.address-1","Location.address_1","","","",0,1,"","","","string {[]} {[]}
+","Address Line 1","This is the first line of the address.","","","","","","","","","",,,,,"",,,,"Location.address_1",0,1,"",""
+"Location","Location.address-2","Location.address_2","","","",0,1,"","","","string {[]} {[]}
+","Address Line 2","This is the second line of the address","","","","","","","","","",,,,,"",,,,"Location.address_2",0,1,"",""
+"Location","Location.city","Location.city","","","",0,1,"","","","string {[]} {[]}
+","City","City","","","","","","","","","",,,,,"",,,,"Location.city",0,1,"",""
+"Location","Location.state","Location.state","","","",0,1,"","","","string {[]} {[]}
+","State","State","","","","","","","","","",,,,,"",,,,"Location.state",0,1,"",""
+"Location","Location.zip","Location.zip","","","",0,1,"","","","string {[]} {[]}
+","Zip Code","Zip Code","","","","","","","","","",,,,,"",,,,"Location.zip",0,1,"",""
+"Location","Location.county","Location.county","","","",0,1,"","","","string {[]} {[]}
+","County","County","","","","","","","","","",,,,,"",,,,"Location.county",0,1,"",""
+"Location","Location.location-source-value","Location.location_source_value","","","",0,1,"","","","string {[]} {[]}
+","Location Identifier Source Value","Location Identifier Source Value","","","","","","","","","",,,,,"",,,,"Location.location_source_value",0,1,"",""
+"Location","Location.country-concept-id","Location.country_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Country","The Concept Id representing the country. Values should conform to the [Geography](https://athena.ohdsi.org/search-terms/terms?domain=Geography&standardConcept=Standard&page=1&pageSize=15&query=&boosts) domain.","","","","","","","","","",,,,,"",,,,"Location.country_concept_id",0,1,"",""
+"Location","Location.country-source-value","Location.country_source_value","","","",0,1,"","","","string {[]} {[]}
+","Country Source Value","The name of the country.","","","","","","","","","",,,,,"",,,,"Location.country_source_value",0,1,"",""
+"Location","Location.latitude","Location.latitude","","","",0,1,"","","","decimal {[]} {[]}
+","Latitude","Latitude","","","","","","","","","",,,,,"",,,,"Location.latitude",0,1,"",""
+"Location","Location.longitude","Location.longitude","","","",0,1,"","","","decimal {[]} {[]}
+","Longitude","Longitude","","","","","","","","","",,,,,"",,,,"Location.longitude",0,1,"",""
+"Person","Person","Person","","","",0,*,"","","","null {[]} {[]}
+","Person OMOP Table","This table serves as the central identity management for all Persons in the database. It contains records that uniquely identify each person or patient, and some demographic information.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Person","Person.person-id","Person.person_id","","","",1,1,"","","","integer {[]} {[]}
+","Person Identifier","It is assumed that every person with a different unique identifier is in fact a different person and should be treated independently.","","","","","","","","","",,,,,"",,,,"Person.person_id",1,1,"",""
+"Person","Person.gender-concept-id","Person.gender_concept_id","","","",1,1,"","","","code {[]} {[]}
+","Gender","This field is meant to capture the biological sex at birth of the Person. This field should not be used to study gender identity issues.","","","","","","","","","",,,,,"",,,,"Person.gender_concept_id",1,1,"",""
+"Person","Person.year-of-birth","Person.year_of_birth","","","",1,1,"","","","integer {[]} {[]}
+","Year of Birth","Compute age using year_of_birth.","","","","","","","","","",,,,,"",,,,"Person.year_of_birth",1,1,"",""
+"Person","Person.month-of-birth","Person.month_of_birth","","","",0,1,"","","","integer {[]} {[]}
+","Month of Birth","Month of Birth","","","","","","","","","",,,,,"",,,,"Person.month_of_birth",0,1,"",""
+"Person","Person.day-of-birth","Person.day_of_birth","","","",0,1,"","","","integer {[]} {[]}
+","Day of Birth","Day of Birth","","","","","","","","","",,,,,"",,,,"Person.day_of_birth",0,1,"",""
+"Person","Person.birth-datetime","Person.birth_datetime","","","",0,1,"","","","dateTime {[]} {[]}
+","Birth Datetime","Birth Datetime","","","","","","","","","",,,,,"",,,,"Person.birth_datetime",0,1,"",""
+"Person","Person.race-concept-id","Person.race_concept_id","","","",1,1,"","","","code {[]} {[]}
+","Race","This field captures race or ethnic background of the person.","","","","","","","","","",,,,,"",,,,"Person.race_concept_id",1,1,"",""
+"Person","Person.ethnicity-concept-id","Person.ethnicity_concept_id","","","",1,1,"","","","code {[]} {[]}
+","Ethnicity","This field captures Ethnicity as defined by the Office of Management and Budget (OMB) of the US Government: it distinguishes only between “Hispanic” and “Not Hispanic”. Races and ethnic backgrounds are not stored here.","","","","","","","","","",,,,,"",,,,"Person.ethnicity_concept_id",1,1,"",""
+"Person","Person.location-id","Person.location_id","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Location]]}
+","Location","The location refers to the physical address of the person. This field should capture the last known location of the person.","","","","","","","","","",,,,,"",,,,"Person.location_id",0,1,"",""
+"Person","Person.provider-id","Person.provider_id","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Provider]]}
+","Provider","The Provider refers to the last known primary care provider (General Practitioner).","","","","","","","","","",,,,,"",,,,"Person.provider_id",0,1,"",""
+"Person","Person.care-site-id","Person.care_site_id","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite]]}
+","Care Site","The Care Site refers to where the Provider typically provides the primary care.","","","","","","","","","",,,,,"",,,,"Person.care_site_id",0,1,"",""
+"Person","Person.person-source-value","Person.person_source_value","","","",0,1,"","","","string {[]} {[]}
+","Person Identifier Source Value","Use this field to link back to persons in the source data. This is typically used for error checking of ETL logic.","","","","","","","","","",,,,,"",,,,"Person.person_source_value",0,1,"",""
+"Person","Person.gender-source-value","Person.gender_source_value","","","",0,1,"","","","string {[]} {[]}
+","Gender Source Value","This field is used to store the biological sex of the person from the source data. It is not intended for use in standard analytics but for reference only.","","","","","","","","","",,,,,"",,,,"Person.gender_source_value",0,1,"",""
+"Person","Person.gender-source-concept-id","Person.gender_source_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Gender Source Concept","If the source data codes biological sex in a non-standard vocabulary, store the concept_id here.","","","","","","","","","",,,,,"",,,,"Person.gender_source_concept_id",0,1,"",""
+"Person","Person.race-source-value","Person.race_source_value","","","",0,1,"","","","string {[]} {[]}
+","Race Source Value","This field is used to store the race of the person from the source data. It is not intended for use in standard analytics but for reference only.","","","","","","","","","",,,,,"",,,,"Person.race_source_value",0,1,"",""
+"Person","Person.race-source-concept-id","Person.race_source_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Race Source Concept","If the source data codes race in an OMOP supported vocabulary store the concept_id here.","","","","","","","","","",,,,,"",,,,"Person.race_source_concept_id",0,1,"",""
+"Person","Person.ethnicity-source-value","Person.ethnicity_source_value","","","",0,1,"","","","string {[]} {[]}
+","Ethnicity Source Value","This field is used to store the ethnicity of the person from the source data. It is not intended for use in standard analytics but for reference only.","","","","","","","","","",,,,,"",,,,"Person.ethnicity_source_value",0,1,"",""
+"Person","Person.ethnicity-source-concept-id","Person.ethnicity_source_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Ethnicity Source Concept","If the source data codes ethnicity in an OMOP supported vocabulary, store the concept_id here.","","","","","","","","","",,,,,"",,,,"Person.ethnicity_source_concept_id",0,1,"",""
+"Provider","Provider","Provider","","","",0,*,"","","","null {[]} {[]}
+","Provider OMOP Table","The PROVIDER table contains a list of uniquely identified healthcare providers. These are individuals providing hands-on healthcare to patients, such as physicians, nurses, midwives, physical therapists etc.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Provider","Provider.provider-id","Provider.provider_id","","","",1,1,"","","","integer {[]} {[]}
+","Provider Identifier","It is assumed that every provider with a different unique identifier is in fact a different person and should be treated independently.","","","","","","","","","",,,,,"",,,,"Provider.provider_id",1,1,"",""
+"Provider","Provider.provider-name","Provider.provider_name","","","",0,1,"","","","string {[]} {[]}
+","Provider Name","Provider Name","","","","","","","","","",,,,,"",,,,"Provider.provider_name",0,1,"",""
+"Provider","Provider.npi","Provider.npi","","","",0,1,"","","","string {[]} {[]}
+","National Provider Identifier","This is the National Provider Number issued to health care providers in the US by the Centers for Medicare and Medicaid Services (CMS).","","","","","","","","","",,,,,"",,,,"Provider.npi",0,1,"",""
+"Provider","Provider.dea","Provider.dea","","","",0,1,"","","","string {[]} {[]}
+","Drug Enforcement Administration Identifer","This is the identifier issued by the DEA, a US federal agency, that allows a provider to write prescriptions for controlled substances.","","","","","","","","","",,,,,"",,,,"Provider.dea",0,1,"",""
+"Provider","Provider.specialty-concept-id","Provider.specialty_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Specialty","This field either represents the most common specialty that occurs in the data or the most specific concept that represents all specialties listed, should the provider have more than one. This includes physician specialties such as internal medicine, emergency medicine, etc. and allied health professionals such as nurses, midwives, and pharmacists.","","","","","","","","","",,,,,"",,,,"Provider.specialty_concept_id",0,1,"",""
+"Provider","Provider.care-site-id","Provider.care_site_id","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite]]}
+","Care Site","This is the location that the provider primarily practices in.","","","","","","","","","",,,,,"",,,,"Provider.care_site_id",0,1,"",""
+"Provider","Provider.year-of-birth","Provider.year_of_birth","","","",0,1,"","","","integer {[]} {[]}
+","Year of Birth","Year of Birth","","","","","","","","","",,,,,"",,,,"Provider.year_of_birth",0,1,"",""
+"Provider","Provider.gender-concept-id","Provider.gender_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Gender","This field represents the recorded gender of the provider in the source data.","","","","","","","","","",,,,,"",,,,"Provider.gender_concept_id",0,1,"",""
+"Provider","Provider.provider-source-value","Provider.provider_source_value","","","",0,1,"","","","string {[]} {[]}
+","Provider Identifier Source Value","Use this field to link back to providers in the source data. This is typically used for error checking of ETL logic.","","","","","","","","","",,,,,"",,,,"Provider.provider_source_value",0,1,"",""
+"Provider","Provider.specialty-source-value","Provider.specialty_source_value","","","",0,1,"","","","string {[]} {[]}
+","Specialty Source Value","This is the kind of provider or specialty as it appears in the source data. This includes physician specialties such as internal medicine, emergency medicine, etc. and allied health professionals such as nurses, midwives, and pharmacists.","","","","","","","","","",,,,,"",,,,"Provider.specialty_source_value",0,1,"",""
+"Provider","Provider.specialty-source-concept-id","Provider.specialty_source_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Specialty Source Concept","This is often zero as many sites use proprietary codes to store physician speciality.","","","","","","","","","",,,,,"",,,,"Provider.specialty_source_concept_id",0,1,"",""
+"Provider","Provider.gender-source-value","Provider.gender_source_value","","","",0,1,"","","","string {[]} {[]}
+","Gender Source Value","This is provider's gender as it appears in the source data.","","","","","","","","","",,,,,"",,,,"Provider.gender_source_value",0,1,"",""
+"Provider","Provider.gender-source-concept-id","Provider.gender_source_concept_id","","","",0,1,"","","","code {[]} {[]}
+","Gender Source Concept","This is often zero as many sites use proprietary codes to store provider gender.","","","","","","","","","",,,,,"",,,,"Provider.gender_source_concept_id",0,1,"",""

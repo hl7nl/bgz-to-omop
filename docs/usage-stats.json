@@ -1,0 +1,19 @@
+{
+  "package": "hl7.fhir.nl.bgz-to-omop",
+  "version": "0.24.0",
+  "fhirVersion": "3.0.2",
+  "jurisdiction": "NL",
+  "extensions": [],
+  "profiles": {},
+  "usage": {
+    "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId": [
+      "ImplementationGuide.dependency"
+    ],
+    "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version": [
+      "ImplementationGuide.dependency"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/logical-target": [
+      "StructureDefinition"
+    ]
+  }
+}
