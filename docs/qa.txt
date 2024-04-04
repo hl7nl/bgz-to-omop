@@ -1,10 +1,10 @@
 bgz-to-omop-ig : Validation Results
 =========================================
 
-err = 11, warn = 9, info = 0
+err = 11, warn = 8, info = 0
 IG Publisher Version: 1.6.4
-Generated Thu Apr 04 12:19:18 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.bgz-to-omop#0.1.0 (canonical = http://hl7.nl/fhir/bgz-to-omop)
- Build Errors : 1 / 5 / 0
+Generated Thu Apr 04 15:12:55 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.bgz-to-omop#0.1.0 (canonical = http://hl7.nl/fhir/bgz-to-omop)
+ Build Errors : 1 / 4 / 0
  /app/input/bgz-to-omop-ig : 0 / 4 / 1
  /app/input/resources/StructMap-Person : 2 / 0 / 1
  /app/input/resources/StructureDefinition-CareSite : 2 / 0 / 1
@@ -17,7 +17,6 @@ WARNING: ImplementationGuide.dependency[0].url: The canonical URL for an Impleme
 WARNING: ImplementationGuide.dependency[1].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/person-transform.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureMap/person-transform.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == input/bgz-to-omop-ig.json ==
 WARNING: ImplementationGuide/hl7.fhir.nl.bgz-to-omop: ImplementationGuide.dependency[0]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions)

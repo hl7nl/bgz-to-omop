@@ -1,7 +1,7 @@
 Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/input/bgz-to-omop-ig.json	2159	-	0	0	0	0	0	0	1	71	0	0	0	0	0	0	0	1	0	0	63	65	0	0	0	1	0	1
-input/resources/StructMap-Person.json	1440	6	1	0	0	0	0	0	0	14	0	0	0	0	0	0	0	0	0	0	51	52	0	1	0	1	0	0
-input/resources/StructureDefinition-CareSite.json	3598	7	0	0	0	0	0	11	0	66	0	0	1	0	0	0	0	0	0	0	149	1763	0	0	0	3	0	0
-input/resources/StructureDefinition-Location.json	4726	6	0	0	1	0	0	18	0	31	0	0	0	0	0	0	0	1	0	0	161	427	0	0	0	4	0	1
-input/resources/StructureDefinition-Person.json	8279	11	0	0	0	0	0	27	0	43	0	0	0	0	0	0	0	0	0	0	201	441	0	0	0	4	0	1
-input/resources/StructureDefinition-Provider.json	6572	6	1	0	0	0	0	22	0	36	0	0	0	0	0	0	0	0	0	0	146	287	0	0	0	3	0	0
+/input/bgz-to-omop-ig.json	2159	-	0	0	0	0	0	0	3	65	0	0	0	0	0	0	0	0	0	0	59	54	0	0	0	2	0	0
+input/resources/StructMap-Person.json	1440	9	0	0	0	1	0	0	0	12	0	0	0	0	0	0	0	0	0	0	51	21	0	0	0	0	0	0
+input/resources/StructureDefinition-CareSite.json	3598	7	1	0	1	0	0	15	0	60	0	0	1	0	0	0	0	1	0	0	95	1427	0	1	0	2	1	1
+input/resources/StructureDefinition-Location.json	4726	5	0	0	0	0	0	24	0	20	0	0	0	0	0	0	0	0	0	0	133	388	0	0	0	2	0	0
+input/resources/StructureDefinition-Person.json	8279	8	1	0	0	0	0	30	0	27	0	0	0	0	0	0	0	0	0	0	243	335	0	0	0	4	0	0
+input/resources/StructureDefinition-Provider.json	6572	6	0	0	0	0	0	19	0	21	0	0	0	0	0	0	0	1	0	0	131	327	0	0	0	4	0	1

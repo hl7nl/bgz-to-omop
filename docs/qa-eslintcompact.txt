@@ -5,7 +5,6 @@ Generic: line 0, col 0, Warning - The canonical URL for an Implementation Guide 
 Generic: line 0, col 0, Warning - The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole (INVALID)
 Generic: line 0, col 0, Error - Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/person-transform.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list. (REQUIRED)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource StructureMap/person-transform.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
-Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 /app/input/bgz-to-omop-ig.json: line 1, col 1434, Warning - The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions) (STRUCTURE)
 /app/input/bgz-to-omop-ig.json: line 1, col 1434, Warning - The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions) (STRUCTURE)
@@ -22,5 +21,5 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /app/input/resources/StructureDefinition-Provider.json: line 1, col 37550, Error - Constraint failed: sdf-8a: 'In any differential, all the elements must be in the specified type' (INVARIANT)
 /app/input/resources/StructureDefinition-Provider.json: line 1, col 37551, Error - Constraint failed: sdf-11: 'If there's a type, its content must match the path name in the first element of a snapshot' (INVARIANT)
 
-err = 11, warn = 9, info = 0
+err = 11, warn = 8, info = 0
 IG Publisher Version: 1.6.4

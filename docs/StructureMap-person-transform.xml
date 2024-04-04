@@ -19,7 +19,7 @@
   <version value="0.1.0"/>
   <name value="Transform from a FHIR Patient to an OMOP Person"/>
   <status value="draft"/>
-  <date value="2024-04-04T12:18:58+00:00"/>
+  <date value="2024-04-04T15:12:40+00:00"/>
   <publisher value="OHDSINL HL7NL"/>
   <contact>
     <name value="OHDSINL"/>
