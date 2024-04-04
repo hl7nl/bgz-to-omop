@@ -1,0 +1,9 @@
+output/
+temp/
+template/
+input-cache/
+.~lock*
+*.jar
+.index.json
+.index.db
+fsh-generated

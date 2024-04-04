@@ -1,0 +1,268 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Person",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/logical-target",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
+  "name": "Person",
+  "title": "Person OMOP Table",
+  "status": "draft",
+  "description": "This table serves as the central identity management for all Persons in the database. It contains records that uniquely identify each person or patient, and some demographic information.",
+  "fhirVersion": "3.0.2",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Person",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Person",
+        "path": "Person",
+        "short": "Person OMOP Table",
+        "definition": "This table serves as the central identity management for all Persons in the database. It contains records that uniquely identify each person or patient, and some demographic information."
+      },
+      {
+        "id": "Person.person_id",
+        "path": "Person.person_id",
+        "short": "Person Identifier",
+        "definition": "It is assumed that every person with a different unique identifier is in fact a different person and should be treated independently.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Person.gender_concept_id",
+        "path": "Person.gender_concept_id",
+        "short": "Gender",
+        "definition": "This field is meant to capture the biological sex at birth of the Person. This field should not be used to study gender identity issues.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Person.year_of_birth",
+        "path": "Person.year_of_birth",
+        "short": "Year of Birth",
+        "definition": "Compute age using year_of_birth.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Person.month_of_birth",
+        "path": "Person.month_of_birth",
+        "short": "Month of Birth",
+        "definition": "Month of Birth",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Person.day_of_birth",
+        "path": "Person.day_of_birth",
+        "short": "Day of Birth",
+        "definition": "Day of Birth",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Person.birth_datetime",
+        "path": "Person.birth_datetime",
+        "short": "Birth Datetime",
+        "definition": "Birth Datetime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Person.race_concept_id",
+        "path": "Person.race_concept_id",
+        "short": "Race",
+        "definition": "This field captures race or ethnic background of the person.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Person.ethnicity_concept_id",
+        "path": "Person.ethnicity_concept_id",
+        "short": "Ethnicity",
+        "definition": "This field captures Ethnicity as defined by the Office of Management and Budget (OMB) of the US Government: it distinguishes only between “Hispanic” and “Not Hispanic”. Races and ethnic backgrounds are not stored here.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Person.location_id",
+        "path": "Person.location_id",
+        "short": "Location",
+        "definition": "The location refers to the physical address of the person. This field should capture the last known location of the person.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Location"
+          }
+        ]
+      },
+      {
+        "id": "Person.provider_id",
+        "path": "Person.provider_id",
+        "short": "Provider",
+        "definition": "The Provider refers to the last known primary care provider (General Practitioner).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Provider"
+          }
+        ]
+      },
+      {
+        "id": "Person.care_site_id",
+        "path": "Person.care_site_id",
+        "short": "Care Site",
+        "definition": "The Care Site refers to where the Provider typically provides the primary care.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite"
+          }
+        ]
+      },
+      {
+        "id": "Person.person_source_value",
+        "path": "Person.person_source_value",
+        "short": "Person Identifier Source Value",
+        "definition": "Use this field to link back to persons in the source data. This is typically used for error checking of ETL logic.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Person.gender_source_value",
+        "path": "Person.gender_source_value",
+        "short": "Gender Source Value",
+        "definition": "This field is used to store the biological sex of the person from the source data. It is not intended for use in standard analytics but for reference only.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Person.gender_source_concept_id",
+        "path": "Person.gender_source_concept_id",
+        "short": "Gender Source Concept",
+        "definition": "If the source data codes biological sex in a non-standard vocabulary, store the concept_id here.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Person.race_source_value",
+        "path": "Person.race_source_value",
+        "short": "Race Source Value",
+        "definition": "This field is used to store the race of the person from the source data. It is not intended for use in standard analytics but for reference only.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Person.race_source_concept_id",
+        "path": "Person.race_source_concept_id",
+        "short": "Race Source Concept",
+        "definition": "If the source data codes race in an OMOP supported vocabulary store the concept_id here.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Person.ethnicity_source_value",
+        "path": "Person.ethnicity_source_value",
+        "short": "Ethnicity Source Value",
+        "definition": "This field is used to store the ethnicity of the person from the source data. It is not intended for use in standard analytics but for reference only.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Person.ethnicity_source_concept_id",
+        "path": "Person.ethnicity_source_concept_id",
+        "short": "Ethnicity Source Concept",
+        "definition": "If the source data codes ethnicity in an OMOP supported vocabulary, store the concept_id here.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CareSite",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/logical-target",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite",
+  "name": "CareSite",
+  "title": "CareSite OMOP Table",
+  "status": "draft",
+  "description": "The CARE_SITE table contains a list of uniquely identified institutional (physical or organizational) units where healthcare delivery is practiced (offices, wards, hospitals, clinics, etc.).",
+  "fhirVersion": "3.0.2",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "CareSite",
+        "path": "CareSite",
+        "short": "CareSite OMOP Table",
+        "definition": "The CARE_SITE table contains a list of uniquely identified institutional (physical or organizational) units where healthcare delivery is practiced (offices, wards, hospitals, clinics, etc.)."
+      },
+      {
+        "id": "CareSite.care_site_id",
+        "path": "CareSite.care_site_id",
+        "short": "Care Site Identifier",
+        "definition": "Care Site Identifier",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "CareSite.care_site_name",
+        "path": "CareSite.care_site_name",
+        "short": "Care Site Name",
+        "definition": "The name of the care_site as it appears in the source data",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "CareSite.place_of_service_concept_id",
+        "path": "CareSite.place_of_service_concept_id",
+        "short": "Place of Service",
+        "definition": "This is a high-level way of characterizing a Care Site. Typically, however, Care Sites can provide care in multiple settings (inpatient, outpatient, etc.) and this granularity should be reflected in the visit.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "CareSite.location_id",
+        "path": "CareSite.location_id",
+        "short": "Location",
+        "definition": "The location_id from the LOCATION table representing the physical location of the care_site.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Location"
+          }
+        ]
+      },
+      {
+        "id": "CareSite.care_site_source_value",
+        "path": "CareSite.care_site_source_value",
+        "short": "Care Site Identifier Source Value",
+        "definition": "The identifier of the care_site as it appears in the source data. This could be an identifier separate from the name of the care_site.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "CareSite.place_of_service_source_value",
+        "path": "CareSite.place_of_service_source_value",
+        "short": "Place of Service Source Value",
+        "definition": "Place of Service Source Value",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

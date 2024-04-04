@@ -1,0 +1,60 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.uv.omop
+# canonical: http://hl7.org/fhir/uv/omop
+canonical: http://hl7.nl/fhir/bgz-to-omop
+name: FHIROMOP
+title: FHIR to OMOP FHIR IG
+description: An IG that provides the mappings and use cases for converting from FHIR to OMOP and from OMOP to FHIR.
+status: draft # draft | active | retired | unknown
+version: 0.1.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2023+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+publisher:
+  name: HL7 International / Biomedical Research and Regulation
+  url: http://www.hl7.org/Special/committees/rcrim
+# extension:
+#   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+#     valueCode: draft
+#   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+#     valueInteger: 1
+#   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+#     valueCode: brr
+
+pages:
+ index.md:
+   title: Home
+ background.md:
+   title: Background
+#   implementation.xml:
+#   examples.xml:
+#     title: Examples Overview
+#     simpleExamples.xml:
+#     complexExamples.xml:
+#
+#
+
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+  Background: background.html
+
+#
+# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
+# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+#
+# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
+# See the individual option definitions below for more detail.
+#
+instanceOptions:
+  # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
+  # in an Instance's assignment rule. All slices appear in the order in which they are specified in FSH rules.
+  # While SUSHI defaults to false for legacy reasons, manualSliceOrding is recommended for new projects.
+  manualSliceOrdering: true # true | false

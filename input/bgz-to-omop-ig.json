@@ -1,0 +1,96 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.nl.bgz-to-omop-ig",
+  "url": "http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/bgz-to-omop-ig",
+  "version": "0.24.0",
+  "name": "bgz-to-omop-ig",
+  "title": "BgZ to OMOP",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "OHDSINL HL7NL",
+  "contact": [
+    {
+      "name": "OHDSINL",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.ohdsi-europe.org/index.php/national-nodes/netherlands"
+        }
+      ]
+    },
+    {
+      "name": "HL7NL",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://hl7.nl"
+        }
+      ]
+    }
+  ],
+  "description": "A brief description of what MyIG is about (probably the same text as in your readme)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.nl.bgz-to-omop",
+  "fhirVersion": [
+    "3.0.2"
+  ],
+  "dependsOn": [
+    {
+      "uri": "https://simplifier.net/packages/hl7.terminology.r3/5.3.0",
+      "packageId": "hl7.terminology.r3",
+      "version": "5.3.0"
+    },
+    {
+      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.18",
+      "packageId": "nictiz.fhir.nl.stu3.zib2017",
+      "version": "2.2.18"
+    }
+  ],
+  "definition": {
+    "page": {
+      "nameUrl": "index.html",
+      "generation": "markdown",
+      "title": "Home Page",
+      "page": [
+        {
+          "nameUrl": "downloads.html",
+          "generation": "markdown",
+          "title": "Useful Downloads"
+        },
+        {
+          "nameUrl": "copyrights.html",
+          "generation": "markdown",
+          "title": "Copyrights"
+        },
+        {
+          "nameUrl": "searchform.html",
+          "generation": "markdown",
+          "title": "Search Form"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "releaselabel",
+        "value": "CI build"
+      },
+      {
+        "code": "copyrightyear",
+        "value": "2024+"
+      },
+      {
+        "code": "display-warnings",
+        "value": "true"
+      }
+    ]
+  }
+}

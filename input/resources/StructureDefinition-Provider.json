@@ -1,0 +1,201 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Provider",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/logical-target",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Provider",
+  "name": "Provider",
+  "title": "Provider OMOP Table",
+  "status": "draft",
+  "description": "The PROVIDER table contains a list of uniquely identified healthcare providers. These are individuals providing hands-on healthcare to patients, such as physicians, nurses, midwives, physical therapists etc.",
+  "fhirVersion": "3.0.2",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/Provider",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Provider",
+        "path": "Provider",
+        "short": "Provider OMOP Table",
+        "definition": "The PROVIDER table contains a list of uniquely identified healthcare providers. These are individuals providing hands-on healthcare to patients, such as physicians, nurses, midwives, physical therapists etc."
+      },
+      {
+        "id": "Provider.provider_id",
+        "path": "Provider.provider_id",
+        "short": "Provider Identifier",
+        "definition": "It is assumed that every provider with a different unique identifier is in fact a different person and should be treated independently.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Provider.provider_name",
+        "path": "Provider.provider_name",
+        "short": "Provider Name",
+        "definition": "Provider Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.npi",
+        "path": "Provider.npi",
+        "short": "National Provider Identifier",
+        "definition": "This is the National Provider Number issued to health care providers in the US by the Centers for Medicare and Medicaid Services (CMS).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.dea",
+        "path": "Provider.dea",
+        "short": "Drug Enforcement Administration Identifer",
+        "definition": "This is the identifier issued by the DEA, a US federal agency, that allows a provider to write prescriptions for controlled substances.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.specialty_concept_id",
+        "path": "Provider.specialty_concept_id",
+        "short": "Specialty",
+        "definition": "This field either represents the most common specialty that occurs in the data or the most specific concept that represents all specialties listed, should the provider have more than one. This includes physician specialties such as internal medicine, emergency medicine, etc. and allied health professionals such as nurses, midwives, and pharmacists.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Provider.care_site_id",
+        "path": "Provider.care_site_id",
+        "short": "Care Site",
+        "definition": "This is the location that the provider primarily practices in.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.nl/fhir/bgz-to-omop/StructureDefinition/CareSite"
+          }
+        ]
+      },
+      {
+        "id": "Provider.year_of_birth",
+        "path": "Provider.year_of_birth",
+        "short": "Year of Birth",
+        "definition": "Year of Birth",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Provider.gender_concept_id",
+        "path": "Provider.gender_concept_id",
+        "short": "Gender",
+        "definition": "This field represents the recorded gender of the provider in the source data.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Provider.provider_source_value",
+        "path": "Provider.provider_source_value",
+        "short": "Provider Identifier Source Value",
+        "definition": "Use this field to link back to providers in the source data. This is typically used for error checking of ETL logic.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.specialty_source_value",
+        "path": "Provider.specialty_source_value",
+        "short": "Specialty Source Value",
+        "definition": "This is the kind of provider or specialty as it appears in the source data. This includes physician specialties such as internal medicine, emergency medicine, etc. and allied health professionals such as nurses, midwives, and pharmacists.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.specialty_source_concept_id",
+        "path": "Provider.specialty_source_concept_id",
+        "short": "Specialty Source Concept",
+        "definition": "This is often zero as many sites use proprietary codes to store physician speciality.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Provider.gender_source_value",
+        "path": "Provider.gender_source_value",
+        "short": "Gender Source Value",
+        "definition": "This is provider's gender as it appears in the source data.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.gender_source_concept_id",
+        "path": "Provider.gender_source_concept_id",
+        "short": "Gender Source Concept",
+        "definition": "This is often zero as many sites use proprietary codes to store provider gender.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      }
+    ]
+  }
+}
