@@ -1,52 +1,51 @@
 {
-    "resource": "Bundle",
-    "id": "ViewDefinition-OMOP-visit_occurance",
-    "select": [
-      {
-        "column": [
-          {
-            "path": "resource.id",
-            "name": "visit_occurrance_id"
-          },
-          {
-            "path": "resource.subject.reference.substring(57)",
-            "name": "perion_id"
-          },
-          {
-            "path": "resource.type.coding[0].code",
-            "name": "visit_concept_id"
-          },
-          {
-            "path": "resource.period.start.substring(0,10)",
-            "name": "visit_start_date"
-          },
-          {
-            "path": "resource.period.start.substring(11)",
-            "name": "visit_start_datetime"
-          },
-          {
-            "path": "resource.period.end.substring(0,10)",
-            "name": "visit_end_date"
-          },
-          {
-            "path": "resource.period.end.substring(11)",
-            "name": "visit_end_datetime"
-          },
-          {
-            "path": "'32817 EHR'",
-            "name": "visi_type_concept_id"
-          },
-          {
-            "path": "resource.participant[0].individual.reference.substring(62)",
-            "name": "provider_id"
-          },
-          {
-            "path": "resource.location[0].location.reference.substring(58)",
-            "name": "care_site_id"
-          }
-        ],
-        "forEach": "entry.where(resource.resourceType = 'Encounter')"
-      }
-    ]
-  }
-  
+  "resource": "Bundle",
+  "id": "ViewDefinition-OMOP-visit_occurance",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "resource.id.substring(0,10)",
+          "name": "visit_occurrance_id"
+        },
+        {
+          "path": "resource.subject.reference.substring(57,10)",
+          "name": "person_id"
+        },
+        {
+          "path": "resource.type.coding[0].code",
+          "name": "visit_concept_id"
+        },
+        {
+          "path": "resource.period.start.substring(0,10)",
+          "name": "visit_start_date"
+        },
+        {
+          "path": "resource.period.start.substring(11)",
+          "name": "visit_start_datetime"
+        },
+        {
+          "path": "resource.period.end.substring(0,10)",
+          "name": "visit_end_date"
+        },
+        {
+          "path": "resource.period.end.substring(11)",
+          "name": "visit_end_datetime"
+        },
+        {
+          "path": "'32817 EHR'",
+          "name": "visi_type_concept_id"
+        },
+        {
+          "path": "resource.participant[0].individual.reference.substring(62,10)",
+          "name": "provider_id"
+        },
+        {
+          "path": "resource.location[0].location.reference.substring(58,10)",
+          "name": "care_site_id"
+        }
+      ],
+      "forEach": "entry.where(resource.resourceType = 'Encounter')"
+    }
+  ]
+}
