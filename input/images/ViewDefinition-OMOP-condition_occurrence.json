@@ -1,0 +1,36 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-OMOP-condition_occurrence",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "onsetDateTime",
+          "name": "Condition_Start_DateTime"
+        },
+        {
+          "path": "abatementDateTime",
+          "name": "Condition_End_DateTime"
+        },
+        {
+          "path": "code.coding.where(system='http://snomed.info/sct').code",
+          "name": "Condition_source_value_SCT"
+        },
+        {
+          "path": "code.coding.where(system='http://hl7.org/fhir/sid/icd-10-nl').code.join(',')",
+          "name": "Condition_source_value_ICD10"
+        },
+        {
+          "path": "subject.display.substring(10,10)",
+          "name": "Person_Source_Value"
+        },
+        {
+          "path": "32817",
+          "name": "Condition_Type_Concept_Id"
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Condition')"
+    }
+  ]
+}

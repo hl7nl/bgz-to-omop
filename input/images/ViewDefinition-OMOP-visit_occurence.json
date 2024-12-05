@@ -1,6 +1,6 @@
 {
   "resource": "Bundle",
-  "id": "ViewDefinition-OMOP-visit_occurance",
+  "id": "ViewDefinition-OMOP-visit_occurrence",
   "select": [
     {
       "column": [
