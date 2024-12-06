@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "bgz-to-omop-ig"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-12-06T10:36:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-06T10:48:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "OHDSINL HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "OHDSINL" ] ;

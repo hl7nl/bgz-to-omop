@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "Location"] ; # 
   fhir:title [ fhir:v "Location OMOP Table"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-06T10:36:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-06T10:48:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "OHDSINL HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "OHDSINL" ] ;

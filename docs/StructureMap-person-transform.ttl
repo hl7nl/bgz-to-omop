@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "Transform from a FHIR Patient to an OMOP Person"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-06T10:36:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-06T10:48:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "OHDSINL HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "OHDSINL" ] ;

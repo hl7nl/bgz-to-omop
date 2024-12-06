@@ -10,7 +10,7 @@ Accept: application/fhir+xml; fhirVersion=3.0
 User-Agent: fhir/publisher
 
 
-Response (00:00:00.147): 
+Response (00:00:00.123): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -20,12 +20,12 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:2479
 content-type:application/fhir+xml; charset=UTF-8
-date:Fri, 06 Dec 2024 10:36:31 GMT
+date:Fri, 06 Dec 2024 10:48:02 GMT
 pragma:no-cache
 server:nginx
-x-request-id:174-594319
+x-request-id:174-596190
 
-<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir"><id value="FhirServer"/><meta><tag><system value="http://hl7.org/fhir/v3/ObservationValue"/><code value="SUBSETTED"/><display value="Subsetted"/></tag></meta><url value="http://tx.fhir.org/r3/CapabilityStatement/tx"/><version value="3.0.2-3.4.32"/><name value="FHIRReferenceServer"/><title value="FHIR Reference Server Conformance Statement"/><status value="active"/><date value="2024-12-06T10:36:31.064Z"/><contact><telecom><system value="other"/><value value="http://healthintersections.com.au/"/></telecom></contact><kind value="instance"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><software><name value="Reference Server"/><version value="3.4.32"/><releaseDate value="2024-12-02T04:08:13.065Z"/></software><implementation><description value="FHIR Server running at http://tx.fhir.org/r3"/><url value="http://tx.fhir.org/r3"/></implementation><fhirVersion value="3.0.2"/><acceptUnknown value="both"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><security><cors value="true"/></security><resource><type value="CodeSystem"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><resource><type value="ValueSet"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><operation><name value="expand"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/></definition></operation><operation><name value="lookup"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"/></definition></operation><operation><name value="validate-code"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/></definition></operation><operation><name value="translate"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/></definition></operation><operation><name value="closure"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"/></definition></operation><operation><name value="versions"/><definition><reference value="http://tx.fhir.org/r3/OperationDefinition/fso-versions"/></definition></operation></rest></CapabilityStatement>
+<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir"><id value="FhirServer"/><meta><tag><system value="http://hl7.org/fhir/v3/ObservationValue"/><code value="SUBSETTED"/><display value="Subsetted"/></tag></meta><url value="http://tx.fhir.org/r3/CapabilityStatement/tx"/><version value="3.0.2-3.4.32"/><name value="FHIRReferenceServer"/><title value="FHIR Reference Server Conformance Statement"/><status value="active"/><date value="2024-12-06T10:48:02.846Z"/><contact><telecom><system value="other"/><value value="http://healthintersections.com.au/"/></telecom></contact><kind value="instance"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><software><name value="Reference Server"/><version value="3.4.32"/><releaseDate value="2024-12-02T04:08:13.065Z"/></software><implementation><description value="FHIR Server running at http://tx.fhir.org/r3"/><url value="http://tx.fhir.org/r3"/></implementation><fhirVersion value="3.0.2"/><acceptUnknown value="both"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><security><cors value="true"/></security><resource><type value="CodeSystem"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><resource><type value="ValueSet"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><operation><name value="expand"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/></definition></operation><operation><name value="lookup"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"/></definition></operation><operation><name value="validate-code"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/></definition></operation><operation><name value="translate"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/></definition></operation><operation><name value="closure"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"/></definition></operation><operation><name value="versions"/><definition><reference value="http://tx.fhir.org/r3/OperationDefinition/fso-versions"/></definition></operation></rest></CapabilityStatement>
 
 </pre><hr/>
 <a name="l2"> </a><h3>2</h3>
@@ -34,7 +34,7 @@ Request:
 
 POST http://tx.fhir.org/r3/CodeSystem/$validate-code? HTTP/1.0
 
-<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="95318cd3-2357-4700-9b66-09846cba738a"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
+<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="d1513bd3-6f71-4e98-9122-9f8796b739cd"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
 
 </pre><hr/>
 <a name="l3"> </a><h3>3</h3>
@@ -46,10 +46,10 @@ Accept: application/fhir+xml; fhirVersion=3.0
 Content-Type: application/fhir+xml; fhirVersion=3.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="95318cd3-2357-4700-9b66-09846cba738a"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
+<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="d1513bd3-6f71-4e98-9122-9f8796b739cd"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
 
 
-Response (00:00:00.117): 
+Response (00:00:00.128): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -59,11 +59,11 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:1828
 content-type:application/fhir+xml; charset=UTF-8
-date:Fri, 06 Dec 2024 10:37:00 GMT
-last-modified:Fri, 06 Dec 2024 10:37:00 GMT
+date:Fri, 06 Dec 2024 10:48:24 GMT
+last-modified:Fri, 06 Dec 2024 10:48:24 GMT
 pragma:no-cache
 server:nginx
-x-request-id:174-594495
+x-request-id:174-596198
 
 <?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="result"/><valueBoolean value="false"/></parameter><parameter><name value="system"/><valueUri value="http://hl7.org/fhir/fhir-types"/></parameter><parameter><name value="x-caused-by-unknown-system"/><valueUri value="http://hl7.org/fhir/fhir-types"/></parameter><parameter><name value="code"/><valueCode value="ImplementationGuide"/></parameter><parameter><name value="message"/><valueString value="A definition for CodeSystem &apos;http://hl7.org/fhir/fhir-types&apos; could not be found, so the code cannot be validated"/></parameter><parameter><name value="issues"/><resource><OperationOutcome><issue><severity value="error"/><code value="not-found"/><details><coding><system value="http://hl7.org/fhir/tools/CodeSystem/tx-issue-type"/><code value="not-found"/></coding><text value="A definition for CodeSystem &apos;http://hl7.org/fhir/fhir-types&apos; could not be found, so the code cannot be validated"/></details><location value="Coding.system"/><expression value="Coding.system"/></issue></OperationOutcome></resource></parameter><parameter><name value="diagnostics"/><valueString value="0 0 : start&#13;&#10;0 0: tx-op&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=en, en-US, nl_NL, default-to-latest&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate &quot;[http://hl7.org/fhir/fhir-types#ImplementationGuide (&quot;&quot;)]&quot;&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check &quot;http://hl7.org/fhir/fhir-types#ImplementationGuide&quot;&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn&apos;t find CodeSystem &quot;http://hl7.org/fhir/fhir-types&quot;&#13;&#10;"/></parameter></Parameters>
 
@@ -75,7 +75,7 @@ Accept: application/fhir+xml; fhirVersion=3.0
 User-Agent: fhir/publisher
 
 
-Response (00:00:00.147): 
+Response (00:00:00.123): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -85,19 +85,19 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:2479
 content-type:application/fhir+xml; charset=UTF-8
-date:Fri, 06 Dec 2024 10:36:31 GMT
+date:Fri, 06 Dec 2024 10:48:02 GMT
 pragma:no-cache
 server:nginx
-x-request-id:174-594319
+x-request-id:174-596190
 
-<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir"><id value="FhirServer"/><meta><tag><system value="http://hl7.org/fhir/v3/ObservationValue"/><code value="SUBSETTED"/><display value="Subsetted"/></tag></meta><url value="http://tx.fhir.org/r3/CapabilityStatement/tx"/><version value="3.0.2-3.4.32"/><name value="FHIRReferenceServer"/><title value="FHIR Reference Server Conformance Statement"/><status value="active"/><date value="2024-12-06T10:36:31.064Z"/><contact><telecom><system value="other"/><value value="http://healthintersections.com.au/"/></telecom></contact><kind value="instance"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><software><name value="Reference Server"/><version value="3.4.32"/><releaseDate value="2024-12-02T04:08:13.065Z"/></software><implementation><description value="FHIR Server running at http://tx.fhir.org/r3"/><url value="http://tx.fhir.org/r3"/></implementation><fhirVersion value="3.0.2"/><acceptUnknown value="both"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><security><cors value="true"/></security><resource><type value="CodeSystem"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><resource><type value="ValueSet"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><operation><name value="expand"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/></definition></operation><operation><name value="lookup"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"/></definition></operation><operation><name value="validate-code"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/></definition></operation><operation><name value="translate"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/></definition></operation><operation><name value="closure"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"/></definition></operation><operation><name value="versions"/><definition><reference value="http://tx.fhir.org/r3/OperationDefinition/fso-versions"/></definition></operation></rest></CapabilityStatement>
+<?xml version="1.0" encoding="UTF-8"?><CapabilityStatement xmlns="http://hl7.org/fhir"><id value="FhirServer"/><meta><tag><system value="http://hl7.org/fhir/v3/ObservationValue"/><code value="SUBSETTED"/><display value="Subsetted"/></tag></meta><url value="http://tx.fhir.org/r3/CapabilityStatement/tx"/><version value="3.0.2-3.4.32"/><name value="FHIRReferenceServer"/><title value="FHIR Reference Server Conformance Statement"/><status value="active"/><date value="2024-12-06T10:48:02.846Z"/><contact><telecom><system value="other"/><value value="http://healthintersections.com.au/"/></telecom></contact><kind value="instance"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><instantiates value="http://hl7.org/fhir/CapabilityStatement/terminology-server"/><software><name value="Reference Server"/><version value="3.4.32"/><releaseDate value="2024-12-02T04:08:13.065Z"/></software><implementation><description value="FHIR Server running at http://tx.fhir.org/r3"/><url value="http://tx.fhir.org/r3"/></implementation><fhirVersion value="3.0.2"/><acceptUnknown value="both"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><security><cors value="true"/></security><resource><type value="CodeSystem"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><resource><type value="ValueSet"/><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource><operation><name value="expand"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/></definition></operation><operation><name value="lookup"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"/></definition></operation><operation><name value="validate-code"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/></definition></operation><operation><name value="translate"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"/></definition></operation><operation><name value="closure"/><definition><reference value="http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"/></definition></operation><operation><name value="versions"/><definition><reference value="http://tx.fhir.org/r3/OperationDefinition/fso-versions"/></definition></operation></rest></CapabilityStatement>
 
 --- 2 -----------------
 Request: 
 
 POST http://tx.fhir.org/r3/CodeSystem/$validate-code? HTTP/1.0
 
-<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="95318cd3-2357-4700-9b66-09846cba738a"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
+<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="d1513bd3-6f71-4e98-9122-9f8796b739cd"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
 
 --- 3 -----------------
 Request: 
@@ -107,10 +107,10 @@ Accept: application/fhir+xml; fhirVersion=3.0
 Content-Type: application/fhir+xml; fhirVersion=3.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="95318cd3-2357-4700-9b66-09846cba738a"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
+<?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="coding"/><valueCoding><system value="http://hl7.org/fhir/fhir-types"/><code value="ImplementationGuide"/></valueCoding></parameter><parameter><name value="displayLanguage"/><valueString value="en, en-US, nl_NL"/></parameter><parameter><name value="default-to-latest-version"/><valueBoolean value="true"/></parameter><parameter><name value="cache-id"/><valueId value="d1513bd3-6f71-4e98-9122-9f8796b739cd"/></parameter><parameter><name value="x-system-cache-id"/><valueString value="dc8fd4bc-091a-424a-8a3b-6198ef146891"/></parameter><parameter><name value="diagnostics"/><valueBoolean value="true"/></parameter></Parameters>
 
 
-Response (00:00:00.117): 
+Response (00:00:00.128): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -120,11 +120,11 @@ cache-control:public, max-age=600
 connection:keep-alive
 content-length:1828
 content-type:application/fhir+xml; charset=UTF-8
-date:Fri, 06 Dec 2024 10:37:00 GMT
-last-modified:Fri, 06 Dec 2024 10:37:00 GMT
+date:Fri, 06 Dec 2024 10:48:24 GMT
+last-modified:Fri, 06 Dec 2024 10:48:24 GMT
 pragma:no-cache
 server:nginx
-x-request-id:174-594495
+x-request-id:174-596198
 
 <?xml version="1.0" encoding="UTF-8"?><Parameters xmlns="http://hl7.org/fhir"><parameter><name value="result"/><valueBoolean value="false"/></parameter><parameter><name value="system"/><valueUri value="http://hl7.org/fhir/fhir-types"/></parameter><parameter><name value="x-caused-by-unknown-system"/><valueUri value="http://hl7.org/fhir/fhir-types"/></parameter><parameter><name value="code"/><valueCode value="ImplementationGuide"/></parameter><parameter><name value="message"/><valueString value="A definition for CodeSystem &apos;http://hl7.org/fhir/fhir-types&apos; could not be found, so the code cannot be validated"/></parameter><parameter><name value="issues"/><resource><OperationOutcome><issue><severity value="error"/><code value="not-found"/><details><coding><system value="http://hl7.org/fhir/tools/CodeSystem/tx-issue-type"/><code value="not-found"/></coding><text value="A definition for CodeSystem &apos;http://hl7.org/fhir/fhir-types&apos; could not be found, so the code cannot be validated"/></details><location value="Coding.system"/><expression value="Coding.system"/></issue></OperationOutcome></resource></parameter><parameter><name value="diagnostics"/><valueString value="0 0 : start&#13;&#10;0 0: tx-op&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=en, en-US, nl_NL, default-to-latest&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate &quot;[http://hl7.org/fhir/fhir-types#ImplementationGuide (&quot;&quot;)]&quot;&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check &quot;http://hl7.org/fhir/fhir-types#ImplementationGuide&quot;&#13;&#10;0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn&apos;t find CodeSystem &quot;http://hl7.org/fhir/fhir-types&quot;&#13;&#10;"/></parameter></Parameters>
 </pre></head></html>

@@ -9,7 +9,7 @@
   "version" : "0.1.0",
   "name" : "Transform from a FHIR Patient to an OMOP Person",
   "status" : "draft",
-  "date" : "2024-12-06T10:36:59+00:00",
+  "date" : "2024-12-06T10:48:23+00:00",
   "publisher" : "OHDSINL HL7NL",
   "contact" : [{
     "name" : "OHDSINL",
