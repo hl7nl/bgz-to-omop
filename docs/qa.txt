@@ -2,8 +2,8 @@ bgz-to-omop-ig : Validation Results
 =========================================
 
 err = 11, warn = 8, info = 0
-IG Publisher Version: 1.6.4
-Generated Thu Apr 04 15:12:55 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.bgz-to-omop#0.1.0 (canonical = http://hl7.nl/fhir/bgz-to-omop)
+IG Publisher Version: 1.7.5
+Generated Fri Dec 06 10:28:57 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.bgz-to-omop#0.1.0 (canonical = http://hl7.nl/fhir/bgz-to-omop)
  Build Errors : 1 / 4 / 0
  /app/input/bgz-to-omop-ig : 0 / 4 / 1
  /app/input/resources/StructMap-Person : 2 / 0 / 1

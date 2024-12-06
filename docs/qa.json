@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "hl7.fhir.nl.bgz-to-omop",
   "ig-ver" : "0.1.0",
-  "date" : "Thu, 04 Apr, 2024 15:12:40 +0000",
-  "dateISO8601" : "2024-04-04T15:12:40+00:00",
+  "date" : "Fri, 06 Dec, 2024 10:28:21 +0000",
+  "dateISO8601" : "2024-12-06T10:28:21+00:00",
   "errs" : 11,
   "warnings" : 8,
   "hints" : 0,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "3.0.2",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 483148176
+  "maxMemory" : 553692688
 }

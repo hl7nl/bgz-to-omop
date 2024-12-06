@@ -2,15 +2,15 @@
   "resourceType" : "ImplementationGuide",
   "id" : "hl7.fhir.nl.bgz-to-omop",
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>bgz-to-omop-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: ImplementationGuide hl7.fhir.nl.bgz-to-omop</b></p><a name=\"hl7.fhir.nl.bgz-to-omop\"> </a><a name=\"hchl7.fhir.nl.bgz-to-omop\"> </a><a name=\"hl7.fhir.nl.bgz-to-omop-nl-NL\"> </a><h2>bgz-to-omop-ig</h2><p>De officiële url voor deze implementatiegids is: </p><pre>http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
   },
   "url" : "http://hl7.nl/fhir/bgz-to-omop/ImplementationGuide/hl7.fhir.nl.bgz-to-omop",
   "version" : "0.1.0",
   "name" : "bgz-to-omop-ig",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2024-04-04T15:12:40+00:00",
+  "date" : "2024-12-06T10:28:21+00:00",
   "publisher" : "OHDSINL HL7NL",
   "contact" : [{
     "name" : "OHDSINL",

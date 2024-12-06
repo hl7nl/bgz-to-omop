@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -38,7 +39,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -154,7 +156,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2024-04-04
+            as of 2024-12-06
           
         
       </td>
@@ -178,11 +180,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#todo" id="markdown-toc-todo">TODO</a></li>
+  <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
+</ul>
+
 </div>
 
 <p>Copied OMOP Logical Models from the <a href="https://github.com/HL7/fhir-omop-ig/tree/main/input/fsh">FHIR to OMOP IG</a>.</p>
+
+<p><img src="pipeline.png" alt="pipeline" /></p>
+
+<h3 id="todo">TODO</h3>
+
+<ul>
+  <li>relatie met Vulcan FHIR to OMOP</li>
+  <li>pipeline beschrijven obv HRI hackathon</li>
+  <li>Condition.verificationStatus = confirmed; en hoe doe je dit met de andere resources?</li>
+  <li>metadata toevoegen; periode van de selectie; 1 jaar aan data; query datum; bepaald specialisme; welke organisatie
+    <ul>
+      <li>Bulk FHIR obv een cohort/study/registry/group</li>
+      <li>Kan ViewDefinition op ndjson werken ipv Bundle</li>
+    </ul>
+  </li>
+  <li>Pseudostap en tool uitleggen</li>
+  <li>FHIR id's zijn geen integers, moeten via lookup opgezocht worden, dus person_id via lookup naar person.person_source_value == FHIR Patient.id
+    <ul>
+      <li>dit geld ook voor codes (naar OMOP vocabulary tables o.a. concept)</li>
+      <li>hoe om te gaan met meerdere codings</li>
+    </ul>
+  </li>
+  <li>relevante OMOP logical models toevoegen (o.a. condition_occurrence)</li>
+  <li>FML versie van ViewDefinitions</li>
+  <li>resource type correctie; als je een Condition via een Observation stuurt (e.g. via een SDE), kan je in de OMOP vocabulary vinden dat hier een conversie nodig is via de OMOP Domain ID (= tabel) https://ohdsi.github.io/CommonDataModel/cdm54.html#concept</li>
+</ul>
 
 <h3 id="dependencies">Dependencies</h3>
 
@@ -208,20 +240,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ohdsi-europe.org/index.php/national-nodes/netherlands">OHDSINL HL7NL</a>.  Package hl7.fhir.nl.bgz-to-omop#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Apr 4, 2024 15:12+0000">2024-04-04</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ohdsi-europe.org/index.php/national-nodes/netherlands">OHDSINL HL7NL</a>.  Package hl7.fhir.nl.bgz-to-omop#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Dec 6, 2024 10:28+0000">2024-12-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -238,7 +264,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -248,16 +274,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

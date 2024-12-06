@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -40,7 +41,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"5.5"}
     h3,h4,h5,h6{--heading-prefix:"5.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -173,7 +175,7 @@
         
           Draft
           
-            as of 2024-04-04
+            as of 2024-12-06
           
         
       </td>
@@ -189,13 +191,12 @@
 
 
 
-  <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap">StructureMap</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;person-transform&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;pre class=&quot;fml&quot;&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Gegenereerde narrative: StructureMap person-transform&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;person-transform&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcperson-transform&quot;&gt; &lt;/a&gt;&lt;a name=&quot;person-transform-nl-NL&quot;&gt; &lt;/a&gt;&lt;pre class=&quot;fml&quot;&gt;
 &lt;b&gt;map&lt;/b&gt;&lt;span style=&quot;color: navy&quot;&gt; &amp;quot;&lt;/span&gt;http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform&lt;span style=&quot;color: navy&quot;&gt;&amp;quot; = &amp;quot;&lt;/span&gt;Transform from a FHIR Patient to an OMOP Person&lt;span style=&quot;color: navy&quot;&gt;&amp;quot;
 
 &lt;/span&gt;&lt;b&gt;uses&lt;/b&gt;&lt;span style=&quot;color: navy&quot;&gt; &amp;quot;&lt;/span&gt;&lt;a href=&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-patient&quot; title=&quot;nl-core-patient&quot;&gt;http://fhir.nl/fhir/StructureDefinition/nl-core-patient&lt;/a&gt;&lt;span style=&quot;color: navy&quot;&gt;&amp;quot; &lt;/span&gt;&lt;b&gt;as &lt;/b&gt;&lt;b&gt;source&lt;/b&gt;
@@ -211,7 +212,7 @@
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transform from a FHIR Patient to an OMOP Person&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2024-04-04T15:12:40+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2024-12-06T10:28:21+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;OHDSINL HL7NL&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuremap.html#StructureMap.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;OHDSINL&quot;/&gt;
@@ -287,20 +288,14 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ohdsi-europe.org/index.php/national-nodes/netherlands">OHDSINL HL7NL</a>.  Package hl7.fhir.nl.bgz-to-omop#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Apr 4, 2024 15:12+0000">2024-04-04</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ohdsi-europe.org/index.php/national-nodes/netherlands">OHDSINL HL7NL</a>.  Package hl7.fhir.nl.bgz-to-omop#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Dec 6, 2024 10:28+0000">2024-12-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -317,7 +312,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -327,16 +322,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

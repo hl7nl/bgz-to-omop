@@ -3,7 +3,7 @@
 <StructureMap xmlns="http://hl7.org/fhir">
   <id value="person-transform"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Gegenereerde narrative: StructureMap person-transform</b></p><a name="person-transform"> </a><a name="hcperson-transform"> </a><a name="person-transform-nl-NL"> </a><pre class="fml">
 <b>map</b><span style="color: navy"> &quot;</span>http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform<span style="color: navy">&quot; = &quot;</span>Transform from a FHIR Patient to an OMOP Person<span style="color: navy">&quot;
 
 </span><b>uses</b><span style="color: navy"> &quot;</span><a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-patient" title="nl-core-patient">http://fhir.nl/fhir/StructureDefinition/nl-core-patient</a><span style="color: navy">&quot; </span><b>as </b><b>source</b>
@@ -19,7 +19,7 @@
   <version value="0.1.0"/>
   <name value="Transform from a FHIR Patient to an OMOP Person"/>
   <status value="draft"/>
-  <date value="2024-04-04T15:12:40+00:00"/>
+  <date value="2024-12-06T10:28:21+00:00"/>
   <publisher value="OHDSINL HL7NL"/>
   <contact>
     <name value="OHDSINL"/>

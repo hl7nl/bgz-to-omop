@@ -1,0 +1,40 @@
+bgz-to-omop-ig : Validation Results
+=========================================
+
+err = 11, warn = 8, info = 0
+$--
+Generated $--. FHIR version $-- for hl7.fhir.nl.bgz-to-omop#$-- (canonical = http://hl7.nl/fhir/bgz-to-omop)
+ Build Errors : 1 / 4 / 0
+ /app/input/bgz-to-omop-ig : 0 / 4 / 1
+ /app/input/resources/StructMap-Person : 2 / 0 / 1
+ /app/input/resources/StructureDefinition-CareSite : 2 / 0 / 1
+ /app/input/resources/StructureDefinition-Location : 2 / 0 / 1
+ /app/input/resources/StructureDefinition-Person : 2 / 0 / 1
+ /app/input/resources/StructureDefinition-Provider : 2 / 0 / 1
+</table>
+== n/a ==
+WARNING: ImplementationGuide.dependency[0].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+WARNING: ImplementationGuide.dependency[1].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/person-transform.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureMap/person-transform.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== input/bgz-to-omop-ig.json ==
+WARNING: ImplementationGuide/hl7.fhir.nl.bgz-to-omop: ImplementationGuide.dependency[0]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions)
+WARNING: ImplementationGuide/hl7.fhir.nl.bgz-to-omop: ImplementationGuide.dependency[0]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions)
+WARNING: ImplementationGuide/hl7.fhir.nl.bgz-to-omop: ImplementationGuide.dependency[1]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions)
+WARNING: ImplementationGuide/hl7.fhir.nl.bgz-to-omop: ImplementationGuide.dependency[1]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions)
+== input/resources/StructMap-Person.json ==
+ERROR: StructureMap/person-transform: StructureMap.group[0]: StructureMap.group.typeMode: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap)
+ERROR: StructureMap/person-transform: StructureMap.group[0].rule[0].source[0]: The source path source.identifier[BSN] refers to the path Patient.identifier[BSN] which is unknown
+== input/resources/StructureDefinition-CareSite.json ==
+ERROR: StructureDefinition/CareSite: StructureDefinition.differential: Constraint failed: sdf-8a: 'In any differential, all the elements must be in the specified type'
+ERROR: StructureDefinition/CareSite: StructureDefinition: Constraint failed: sdf-11: 'If there's a type, its content must match the path name in the first element of a snapshot'
+== input/resources/StructureDefinition-Location.json ==
+ERROR: StructureDefinition/Location: StructureDefinition.differential: Constraint failed: sdf-8a: 'In any differential, all the elements must be in the specified type'
+ERROR: StructureDefinition/Location: StructureDefinition: Constraint failed: sdf-11: 'If there's a type, its content must match the path name in the first element of a snapshot'
+== input/resources/StructureDefinition-Person.json ==
+ERROR: StructureDefinition/Person: StructureDefinition.differential: Constraint failed: sdf-8a: 'In any differential, all the elements must be in the specified type'
+ERROR: StructureDefinition/Person: StructureDefinition: Constraint failed: sdf-11: 'If there's a type, its content must match the path name in the first element of a snapshot'
+== input/resources/StructureDefinition-Provider.json ==
+ERROR: StructureDefinition/Provider: StructureDefinition.differential: Constraint failed: sdf-8a: 'In any differential, all the elements must be in the specified type'
+ERROR: StructureDefinition/Provider: StructureDefinition: Constraint failed: sdf-11: 'If there's a type, its content must match the path name in the first element of a snapshot'

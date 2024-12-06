@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -38,7 +39,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"5.5"}
     h3,h4,h5,h6{--heading-prefix:"5.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -186,7 +188,7 @@
         
           Draft
           
-            as of 2024-04-04
+            as of 2024-12-06
           
         
       </td>
@@ -215,7 +217,7 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Gegenereerde narrative: StructureMap person-transform</b></p><a name="person-transform"> </a><a name="hcperson-transform"> </a><a name="person-transform-nl-NL"> </a><pre class="fml">
 <b>map</b><span style="color: navy"> &quot;</span>http://hl7.nl/fhir/bgz-to-omop/StructureMap/person-transform<span style="color: navy">&quot; = &quot;</span>Transform from a FHIR Patient to an OMOP Person<span style="color: navy">&quot;
 
 </span><b>uses</b><span style="color: navy"> &quot;</span><a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-patient" title="nl-core-patient">http://fhir.nl/fhir/StructureDefinition/nl-core-patient</a><span style="color: navy">&quot; </span><b>as </b><b>source</b>
@@ -243,20 +245,14 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ohdsi-europe.org/index.php/national-nodes/netherlands">OHDSINL HL7NL</a>.  Package hl7.fhir.nl.bgz-to-omop#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Apr 4, 2024 15:12+0000">2024-04-04</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ohdsi-europe.org/index.php/national-nodes/netherlands">OHDSINL HL7NL</a>.  Package hl7.fhir.nl.bgz-to-omop#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Dec 6, 2024 10:28+0000">2024-12-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -273,7 +269,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -283,16 +279,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>
