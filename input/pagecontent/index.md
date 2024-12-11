@@ -20,15 +20,21 @@
 * FML versie van ViewDefinitions
 * resource type correctie; als je een Condition via een Observation stuurt (e.g. via een SDE), kan je in de OMOP vocabulary vinden dat hier een conversie nodig is via de OMOP Domain ID (= tabel) https://ohdsi.github.io/CommonDataModel/cdm54.html#concept
 
-### OMOP Logical Models
-
-Copied OMOP Logical Models from the Vulcan [FHIR to OMOP IG](https://github.com/HL7/fhir-omop-ig/tree/main/input/fsh).
-
 ### ViewDefinitions
 
 * [ViewDefinition-OMOP-condition_occurrence](ViewDefinition-OMOP-condition_occurrence.json)
 * [ViewDefinition-OMOP-visit_occurence](ViewDefinition-OMOP-visit_occurence.json)
 
 ### Dependencies
+
+* FHIR to OMOP gaat januari 2025 in ballot. Als die gepublished is kunnen we daarop dependen, nu even gecopyeerd uit de [CI-build](https://build.fhir.org/ig/HL7/fhir-omop-ig/).
+```json
+    "dependsOn": [
+    {
+      "uri": "http://hl7.org/fhir/uv/omop/ImplementationGuide/hl7.fhir.uv.omop",
+      "packageId": "hl7.fhir.uv.omop",
+      "version": "0.1.0"
+    } ]
+```
 
 {% include dependency-table.xhtml %}

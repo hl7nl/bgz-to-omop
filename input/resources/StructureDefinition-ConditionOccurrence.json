@@ -1,0 +1,635 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ConditionOccurrence",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+      "valueCode": "can-be-target"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "brr"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1,
+      "_valueInteger": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "valueCanonical": "http://hl7.org/fhir/uv/omop/ImplementationGuide/hl7.fhir.uv.omop"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft",
+      "_valueCode": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "valueCanonical": "http://hl7.org/fhir/uv/omop/ImplementationGuide/hl7.fhir.uv.omop"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "http://hl7.org/fhir/uv/omop/StructureDefinition/ConditionOccurrence",
+  "version": "0.1.0",
+  "name": "ConditionOccurrence",
+  "title": "Condition Occurrence OMOP Table",
+  "status": "draft",
+  "date": "2024-08-21T19:54:58+00:00",
+  "publisher": "HL7 International / Biomedical Research and Regulation",
+  "contact": [
+    {
+      "name": "HL7 International / Biomedical Research and Regulation",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/rcrim"
+        }
+      ]
+    }
+  ],
+  "description": "This table contains records of Events of a Person suggesting the presence of a disease or medical condition stated as a diagnosis, a sign, or a symptom, which is either observed by a Provider or reported by the patient.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/fhir/uv/omop/StructureDefinition/ConditionOccurrence",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "ConditionOccurrence",
+        "path": "ConditionOccurrence",
+        "short": "Condition Occurrence OMOP Table",
+        "definition": "This table contains records of Events of a Person suggesting the presence of a disease or medical condition stated as a diagnosis, a sign, or a symptom, which is either observed by a Provider or reported by the patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Base",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-occurrence-id",
+        "path": "ConditionOccurrence.condition_occurrence_id",
+        "short": "Condition Occurence Identifier",
+        "definition": "The unique key given to a condition record for a person. Refer to the ETL for how duplicate conditions during the same visit were handled.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_occurrence_id",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.person-id",
+        "path": "ConditionOccurrence.person_id",
+        "short": "Person",
+        "definition": "The PERSON_ID of the PERSON for whom the condition is recorded.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.person_id",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/Person"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-concept-id",
+        "path": "ConditionOccurrence.condition_concept_id",
+        "short": "Condition",
+        "definition": "The CONDITION_CONCEPT_ID field is recommended for primary use in analyses, and must be used for network studies. This is the standard concept mapped from the source value which represents a condition",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_concept_id",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-start-date",
+        "path": "ConditionOccurrence.condition_start_date",
+        "short": "Condition Start Date",
+        "definition": "Use this date to determine the start date of the condition",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_start_date",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-start-datetime",
+        "path": "ConditionOccurrence.condition_start_datetime",
+        "short": "Condition Start Datetime",
+        "definition": "Condition Start Datetime",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_start_datetime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-end-date",
+        "path": "ConditionOccurrence.condition_end_date",
+        "short": "Condition End Date",
+        "definition": "Use this date to determine the end date of the condition",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_end_date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-end-datetime",
+        "path": "ConditionOccurrence.condition_end_datetime",
+        "short": "Condition End Datetime",
+        "definition": "Condition End Datetime",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_end_datetime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-type-concept-id",
+        "path": "ConditionOccurrence.condition_type_concept_id",
+        "short": "Condition Type",
+        "definition": "This field can be used to determine the provenance of the Condition record, as in whether the condition was from an EHR system, insurance claim, registry, or other sources.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_type_concept_id",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-status-concept-id",
+        "path": "ConditionOccurrence.condition_status_concept_id",
+        "short": "Condition Status",
+        "definition": "This concept represents the point during the visit the diagnosis was given (admitting diagnosis, final diagnosis), whether the diagnosis was determined due to laboratory findings, if the diagnosis was exclusionary, or if it was a preliminary diagnosis, among others.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_status_concept_id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.stop-reason",
+        "path": "ConditionOccurrence.stop_reason",
+        "short": "Stop Reason",
+        "definition": "The Stop Reason indicates why a Condition is no longer valid with respect to the purpose within the source data. Note that a Stop Reason does not necessarily imply that the condition is no longer occurring.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.stop_reason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.provider-id",
+        "path": "ConditionOccurrence.provider_id",
+        "short": "Provider",
+        "definition": "The provider associated with condition record, e.g. the provider who made the diagnosis or the provider who recorded the symptom.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.provider_id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/Provider"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.visit-occurrence-id",
+        "path": "ConditionOccurrence.visit_occurrence_id",
+        "short": "Visit Occurrence",
+        "definition": "The visit during which the condition occurred.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.visit_occurrence_id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/VisitOccurrence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.visit-detail-id",
+        "path": "ConditionOccurrence.visit_detail_id",
+        "short": "Visit Detail",
+        "definition": "The VISIT_DETAIL record during which the condition occurred. For example, if the person was in the ICU at the time of the diagnosis the VISIT_OCCURRENCE record would reflect the overall hospital stay and the VISIT_DETAIL record would reflect the ICU stay during the hospital visit.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.visit_detail_id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/VisitDetail"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-source-value",
+        "path": "ConditionOccurrence.condition_source_value",
+        "short": "Condition Source Value",
+        "definition": "This field houses the verbatim value from the source data representing the condition that occurred. For example, this could be an ICD10 or Read code.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_source_value",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-source-concept-id",
+        "path": "ConditionOccurrence.condition_source_concept_id",
+        "short": "Condition Source Concept",
+        "definition": "This is the concept representing the condition source value and may not necessarily be standard. This field is discouraged from use in analysis because it is not required to contain Standard Concepts that are used across the OHDSI community, and should only be used when Standard Concepts do not adequately represent the source detail for the Condition necessary for a given analytic use case. Consider using CONDITION_CONCEPT_ID instead to enable standardized analytics that can be consistent across the network.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_source_concept_id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-status-source-value",
+        "path": "ConditionOccurrence.condition_status_source_value",
+        "short": "Condition Status Source Value",
+        "definition": "This field houses the verbatim value from the source data representing the condition status.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ConditionOccurrence.condition_status_source_value",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "ConditionOccurrence",
+        "path": "ConditionOccurrence",
+        "short": "Condition Occurrence OMOP Table",
+        "definition": "This table contains records of Events of a Person suggesting the presence of a disease or medical condition stated as a diagnosis, a sign, or a symptom, which is either observed by a Provider or reported by the patient."
+      },
+      {
+        "id": "ConditionOccurrence.condition-occurrence-id",
+        "path": "ConditionOccurrence.condition_occurrence_id",
+        "short": "Condition Occurence Identifier",
+        "definition": "The unique key given to a condition record for a person. Refer to the ETL for how duplicate conditions during the same visit were handled.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.person-id",
+        "path": "ConditionOccurrence.person_id",
+        "short": "Person",
+        "definition": "The PERSON_ID of the PERSON for whom the condition is recorded.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/Person"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-concept-id",
+        "path": "ConditionOccurrence.condition_concept_id",
+        "short": "Condition",
+        "definition": "The CONDITION_CONCEPT_ID field is recommended for primary use in analyses, and must be used for network studies. This is the standard concept mapped from the source value which represents a condition",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-start-date",
+        "path": "ConditionOccurrence.condition_start_date",
+        "short": "Condition Start Date",
+        "definition": "Use this date to determine the start date of the condition",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-start-datetime",
+        "path": "ConditionOccurrence.condition_start_datetime",
+        "short": "Condition Start Datetime",
+        "definition": "Condition Start Datetime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-end-date",
+        "path": "ConditionOccurrence.condition_end_date",
+        "short": "Condition End Date",
+        "definition": "Use this date to determine the end date of the condition",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-end-datetime",
+        "path": "ConditionOccurrence.condition_end_datetime",
+        "short": "Condition End Datetime",
+        "definition": "Condition End Datetime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-type-concept-id",
+        "path": "ConditionOccurrence.condition_type_concept_id",
+        "short": "Condition Type",
+        "definition": "This field can be used to determine the provenance of the Condition record, as in whether the condition was from an EHR system, insurance claim, registry, or other sources.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-status-concept-id",
+        "path": "ConditionOccurrence.condition_status_concept_id",
+        "short": "Condition Status",
+        "definition": "This concept represents the point during the visit the diagnosis was given (admitting diagnosis, final diagnosis), whether the diagnosis was determined due to laboratory findings, if the diagnosis was exclusionary, or if it was a preliminary diagnosis, among others.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.stop-reason",
+        "path": "ConditionOccurrence.stop_reason",
+        "short": "Stop Reason",
+        "definition": "The Stop Reason indicates why a Condition is no longer valid with respect to the purpose within the source data. Note that a Stop Reason does not necessarily imply that the condition is no longer occurring.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.provider-id",
+        "path": "ConditionOccurrence.provider_id",
+        "short": "Provider",
+        "definition": "The provider associated with condition record, e.g. the provider who made the diagnosis or the provider who recorded the symptom.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/Provider"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.visit-occurrence-id",
+        "path": "ConditionOccurrence.visit_occurrence_id",
+        "short": "Visit Occurrence",
+        "definition": "The visit during which the condition occurred.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/VisitOccurrence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.visit-detail-id",
+        "path": "ConditionOccurrence.visit_detail_id",
+        "short": "Visit Detail",
+        "definition": "The VISIT_DETAIL record during which the condition occurred. For example, if the person was in the ICU at the time of the diagnosis the VISIT_OCCURRENCE record would reflect the overall hospital stay and the VISIT_DETAIL record would reflect the ICU stay during the hospital visit.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/omop/StructureDefinition/VisitDetail"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-source-value",
+        "path": "ConditionOccurrence.condition_source_value",
+        "short": "Condition Source Value",
+        "definition": "This field houses the verbatim value from the source data representing the condition that occurred. For example, this could be an ICD10 or Read code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-source-concept-id",
+        "path": "ConditionOccurrence.condition_source_concept_id",
+        "short": "Condition Source Concept",
+        "definition": "This is the concept representing the condition source value and may not necessarily be standard. This field is discouraged from use in analysis because it is not required to contain Standard Concepts that are used across the OHDSI community, and should only be used when Standard Concepts do not adequately represent the source detail for the Condition necessary for a given analytic use case. Consider using CONDITION_CONCEPT_ID instead to enable standardized analytics that can be consistent across the network.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ConditionOccurrence.condition-status-source-value",
+        "path": "ConditionOccurrence.condition_status_source_value",
+        "short": "Condition Status Source Value",
+        "definition": "This field houses the verbatim value from the source data representing the condition status.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
