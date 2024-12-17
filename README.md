@@ -3,9 +3,9 @@
 * Poster "Leveraging FHIR for a generic EHR to OMOP-ETL: can we make an ETL process reusable?"
 * BgZ als FHIR Bundle omzetten naar OMOP voor hergebruik in onderzoek.
 * Waarom?
-* - gestandaardiseerde extractie (uit verschillende vendor systemen, vanuit verschillende organisaties) biedt meer kansen voor generieke, gestandaardiseerde ETL  
-* - minder gevarieerde input => minder ingewikkelde ETL (minder conditionele paden)
-* - makkelijker om tot 'goede' vulling OMOP-CDM te komen?
+  - gestandaardiseerde extractie (uit verschillende vendor systemen, vanuit verschillende organisaties) biedt meer kansen voor generieke, gestandaardiseerde ETL  
+  - minder gevarieerde input => minder ingewikkelde ETL (minder conditionele paden)
+  - makkelijker om tot 'goede' vulling OMOP-CDM te komen?
     
 * Later ook proberen IPS, e.g. op basis van de $ips operation van Epic [$summary?]
 * Dan ook vergelijken met ander IPS operations (hapi, ...)
@@ -13,10 +13,10 @@
 * (andere) Metadata tbv OMOP ETL.
 * Definieer StructureMaps van OMOP logical models (https://build.fhir.org/ig/HL7/fhir-omop-ig/) naar zibs2017/STU3 FHIR
 * Eventueel ook kijken naar SQL-on-FHIR (https://build.fhir.org/ig/FHIR/sql-on-fhir-v2/) ViewDefinitions
-* 
+  
 * Waar lopen we tegenaan? mini-hackathon bevindingen:
-* - gestandardaardiseerd ho maar
-* - standaard FHIR issues/variaties ook hier van toepassing 
+  - gestandardaardiseerd ho maar
+  - standaard FHIR issues/variaties ook hier van toepassing 
 
 # Docker to run IG Publisher
 ```
