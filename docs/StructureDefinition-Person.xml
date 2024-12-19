@@ -102,7 +102,7 @@
         <max value="1"/>
       </base>
       <type>
-        <code value="code"/>
+        <code value="integer"/>
       </type>
     </element>
     <element id="Person.year-of-birth">
@@ -177,7 +177,7 @@
         <max value="1"/>
       </base>
       <type>
-        <code value="code"/>
+        <code value="integer"/>
       </type>
     </element>
     <element id="Person.ethnicity-concept-id">
@@ -192,7 +192,7 @@
         <max value="1"/>
       </base>
       <type>
-        <code value="code"/>
+        <code value="integer"/>
       </type>
     </element>
     <element id="Person.location-id">
@@ -285,7 +285,7 @@
         <max value="1"/>
       </base>
       <type>
-        <code value="code"/>
+        <code value="integer"/>
       </type>
     </element>
     <element id="Person.race-source-value">
